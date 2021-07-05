@@ -15,17 +15,17 @@ body {
     padding: 0;
 }
 
-main ul {
+.global-ul {
     padding: 0;
     margin: 0;
 }
 
-main li {
+.global-list {
     list-style: none;
     display: inline-block;
 }
 
-ul li a {
+.global-remove-text-decoration {
     text-decoration: none;
 }
 
@@ -376,7 +376,7 @@ ul li a {
 /* Begin : Education-Section Div */
 
 .education-section {
-    padding-bottom: 2.5em;
+    padding-bottom: 5em;
 }
 
 .education-body {

@@ -4,10 +4,6 @@ header {
     padding: 1em;
 }
 
-body {
-    margin: 0;
-}
-
 .navbar {
     width: 85vw;
     margin: 0 auto;
@@ -21,18 +17,7 @@ body {
 }
 
 .nav-container a{
-    text-decoration: none;
     color: #ffffff;
-}
-
-.nav-container li {
-    list-style: none;
-    display: inline-block;
-}
-
-.nav-container ul {
-    padding: 0;
-    margin: 0;
 }
 
 .nav-container {
@@ -66,10 +51,6 @@ body {
 .nav-item {
     text-align: center;
     margin: 0 0.7em;
-}
-
-.nav-ul {
-    display: inline-block;
 }
 
 
