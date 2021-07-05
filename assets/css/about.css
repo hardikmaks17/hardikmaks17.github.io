@@ -98,10 +98,12 @@ body {
 }
 
 .profile-footer-item {
-    background-color: #aaa;
-    width: 1.25em;
-    height: 1.25em;
     margin: 0 0.2em;
+}
+
+.profile-card-footer-icon{
+    color: #222;
+    font-size: 2em;
 }
 /* End: profile-card */
 

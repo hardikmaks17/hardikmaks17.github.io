@@ -30,6 +30,10 @@ footer a {
     line-height: 3em;
 }
 
+.footer-social-item {
+    margin: 10px;
+}
+
 .footer-contact-title, .footer-social-title, .footer-subscribe-title {
     font-weight: 500;
     font-size: 1.2em;
@@ -46,7 +50,7 @@ footer a {
 
 .footer-contact-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     margin: 1.5em 0;
@@ -64,10 +68,8 @@ footer a {
 }
 
 .footer-icon {
-    height: 20px;
-    width: 20px;
-    color: #fff;
-    background-color: #fff;
+    font-size: 2em;
+    color: #ddd;
 }
 
 .footer-iframe-map {
@@ -98,7 +100,7 @@ footer a {
     }
 }
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 1166px) {
     .footer-git-flex-item {
         flex-grow: 1;
     }

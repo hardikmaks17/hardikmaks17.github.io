@@ -32,6 +32,10 @@ header {
     margin-right: 0.5em;
 }
 
+.nav-telephone-icon {
+    margin-right: 5px;
+}
+
 .nav-tab {
     margin: 0 1em;
 }
@@ -46,6 +50,10 @@ header {
 
 .social-item {
     margin: 0 0.3em;
+}
+
+.header-icon {
+    font-size: 1.25em;
 }
 
 .nav-item {
