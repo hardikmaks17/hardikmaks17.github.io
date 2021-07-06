@@ -27,7 +27,7 @@ footer a {
 }
 
 .footer-contact-information {
-    line-height: 3em;
+    line-height: 2em;
 }
 
 .footer-social-item {
@@ -87,6 +87,14 @@ footer a {
     padding-top: 10px;
 }
 
+.footer-email-input {
+    padding: 5px;
+}
+
+.footer-submit-btn {
+    padding: 5px;
+}
+
 
 @media screen and (max-width: 960px) {
     .footer-contact-map, .footer-contact-address {
@@ -94,9 +102,6 @@ footer a {
     }
     .footer-contact-flex-item {
         flex-grow: 1;
-    }
-    .footer-contact-information {
-        line-height: 2em;
     }
 }
 
@@ -124,5 +129,14 @@ footer a {
     .footer-vertical-line {
         display: none;
         width: 10px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .footer-email-input {
+        padding-right: 50px;
+    }
+    .footer-submit-btn {
+        padding: 5px 15px;
     }
 }
