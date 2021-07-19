@@ -119,16 +119,15 @@ footer a {
 }
 
 @media screen and (max-width: 784px) {
+    .footer-contact {
+        padding-top: 1.5em;
+    }
     .footer-sitemap {
         padding: 2em 0;
-    }
-    .footer-sitemap-item {
-        display: block;
-        margin: 5px 0;
+        display: none;
     }
     .footer-vertical-line {
         display: none;
-        width: 10px;
     }
 }
 
