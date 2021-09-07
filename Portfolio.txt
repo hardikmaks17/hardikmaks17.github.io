@@ -1,6 +1,0 @@
-Home - All main combined
-Blog
-Projects
-Gallery
-About - intro, profile, resume
-contact - get in touch form, map(address), contact details like Gmail, mobile, all social accounts
