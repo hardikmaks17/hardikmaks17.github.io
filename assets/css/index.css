@@ -1,0 +1,58 @@
+/* Begin : Testing Part */
+
+/* .welcome-container * {
+    border: 1px dotted white;
+    width: 100%;
+} */
+
+/* End : Testing Part */
+
+/* Begin : COMMON Part */
+
+header {
+    height: 11vh;
+}
+
+/* End : COMMON Part */
+
+/* Begin : MAIN Part */
+    
+    /* Begin : Welcome Section */
+    
+    .welcome {
+        background-color: #06273a;
+        color: #fff;
+    }
+    
+    .welcome-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 89vh;
+        width: 85vw;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.25rem;
+        letter-spacing: 1px;
+    }
+
+    .welcome-title {
+        font-size: 3.5rem;
+    }
+
+    .welcome-paragraph {
+        width: 75%;
+    }
+
+    .welcome-get-in-touch {
+        width: fit-content;
+        color: #000;
+        background-color: #fff;
+        padding: 0.5em 1.5em;
+        margin-top: 2em;
+    }
+
+    /* End : Welcome Section */
+
+/* End : MAIN Part */
