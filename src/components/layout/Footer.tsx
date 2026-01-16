@@ -27,10 +27,12 @@ const Footer = () => {
             className="text-center md:text-left"
           >
             <h3 className="font-display font-bold text-xl gradient-text">
-              Portfolio
+              Maks Portfolio
             </h3>
-            <p className="text-sm text-muted-foreground mt-1">
-              Frontend Developer
+            <p className="text-sm text-muted-foreground max-w-sm mt-1">
+              Frontend Developer specializing in React, TypeScript, and modern
+              UI systems. Turning complex problems into elegant digital
+              products.
             </p>
           </motion.div>
 
@@ -64,7 +66,7 @@ const Footer = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-center md:text-right"
           >
-            <p className="text-sm text-muted-foreground flex items-center gap-1 justify-center md:justify-end">
+            <p className="text-sm text-muted-foreground flex flex-wrap items-center gap-1 justify-center md:justify-end">
               © {currentYear} Made with{" "}
               <Heart className="w-4 h-4 text-destructive fill-destructive" />
               All rights reserved.

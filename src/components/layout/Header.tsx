@@ -28,7 +28,7 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-4 bg-background/80 backdrop-blur-lg border-b border-border"
+          ? "py-4 bg-background/50 backdrop-blur-lg border-b border-border"
           : "py-6"
       }`}
     >
@@ -42,9 +42,8 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            <img src="/favicon.png" alt="Logo" className="w-8 h-8" />
             <span className="font-display font-bold text-xl gradient-text">
-              Portfolio
+              Maks Portfolio
             </span>
           </motion.a>
 

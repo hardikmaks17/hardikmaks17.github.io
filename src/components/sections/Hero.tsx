@@ -53,7 +53,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Frontend Engineer specializing in React, TypeScript, and modern UI
+            Frontend Developer specializing in React, TypeScript, and modern UI
             systems. Turning complex problems into elegant digital products.
           </motion.p>
 
