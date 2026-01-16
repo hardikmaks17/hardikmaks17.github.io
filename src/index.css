@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -95,11 +95,16 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Space Grotesk", sans-serif;
   }
 }
 
@@ -113,7 +118,7 @@
   }
 
   .glass-card::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(
@@ -144,7 +149,7 @@
   }
 
   .gradient-border::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     padding: 1px;
@@ -154,8 +159,12 @@
       hsl(var(--gradient-cyan) / 0.5),
       hsl(var(--gradient-purple) / 0.5)
     );
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
@@ -163,15 +172,17 @@
 
   /* Glow effect */
   .glow-cyan {
-    box-shadow: 0 0 20px hsl(var(--glow-cyan) / 0.3),
-                0 0 40px hsl(var(--glow-cyan) / 0.2),
-                0 0 60px hsl(var(--glow-cyan) / 0.1);
+    box-shadow:
+      0 0 20px hsl(var(--glow-cyan) / 0.3),
+      0 0 40px hsl(var(--glow-cyan) / 0.2),
+      0 0 60px hsl(var(--glow-cyan) / 0.1);
   }
 
   .glow-purple {
-    box-shadow: 0 0 20px hsl(var(--glow-purple) / 0.3),
-                0 0 40px hsl(var(--glow-purple) / 0.2),
-                0 0 60px hsl(var(--glow-purple) / 0.1);
+    box-shadow:
+      0 0 20px hsl(var(--glow-purple) / 0.3),
+      0 0 40px hsl(var(--glow-purple) / 0.2),
+      0 0 60px hsl(var(--glow-purple) / 0.1);
   }
 
   /* Animated gradient background */
@@ -194,16 +205,28 @@
   }
 
   .mesh-gradient::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -50%;
     left: -50%;
     width: 200%;
     height: 200%;
-    background: 
-      radial-gradient(circle at 20% 80%, hsl(var(--gradient-purple) / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, hsl(var(--gradient-cyan) / 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, hsl(var(--gradient-blue) / 0.1) 0%, transparent 40%);
+    background:
+      radial-gradient(
+        circle at 20% 80%,
+        hsl(var(--gradient-purple) / 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 80% 20%,
+        hsl(var(--gradient-cyan) / 0.15) 0%,
+        transparent 50%
+      ),
+      radial-gradient(
+        circle at 40% 40%,
+        hsl(var(--gradient-blue) / 0.1) 0%,
+        transparent 40%
+      );
     animation: mesh-float 20s ease-in-out infinite;
     pointer-events: none;
   }
@@ -211,7 +234,11 @@
   /* Button variants */
   .btn-primary {
     @apply px-6 py-3 rounded-xl font-medium transition-all duration-300;
-    background: linear-gradient(135deg, hsl(var(--gradient-cyan)), hsl(var(--gradient-blue)));
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-cyan)),
+      hsl(var(--gradient-blue))
+    );
     color: hsl(var(--primary-foreground));
   }
 
@@ -282,7 +309,7 @@
 
   /* Grid pattern */
   .grid-pattern {
-    background-image: 
+    background-image:
       linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
       linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
     background-size: 60px 60px;
@@ -308,7 +335,8 @@
 }
 
 @keyframes mesh-float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(0, 0) rotate(0deg);
   }
   25% {
@@ -323,7 +351,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -332,7 +361,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
   }
   50% {

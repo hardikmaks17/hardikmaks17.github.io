@@ -32,7 +32,7 @@ const Header = () => {
           : "py-6"
       }`}
     >
-      <div className="container px-6">
+      <div className="container">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.a
@@ -43,7 +43,9 @@ const Header = () => {
             className="flex items-center gap-2"
           >
             <img src="/favicon.png" alt="Logo" className="w-8 h-8" />
-            <span className="font-display font-bold text-xl gradient-text">Portfolio</span>
+            <span className="font-display font-bold text-xl gradient-text">
+              Portfolio
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -83,7 +85,11 @@ const Header = () => {
             className="lg:hidden p-2 text-foreground"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -98,20 +104,22 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="lg:hidden bg-background/95 backdrop-blur-lg border-b border-border"
           >
-            <nav className="container px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <Button variant="hero" size="lg" className="mt-4">
-                Let's Talk
-              </Button>
+            <nav className="container">
+              <div className="flex flex-col gap-4 py-6">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <Button variant="hero" size="lg" className="mt-4">
+                  Let's Talk
+                </Button>
+              </div>
             </nav>
           </motion.div>
         )}

@@ -7,12 +7,18 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden mesh-gradient">
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      
+
       {/* Floating orbs */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-[hsl(var(--gradient-cyan)/0.1)] blur-3xl animate-float" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[hsl(var(--gradient-purple)/0.1)] blur-3xl animate-float" style={{ animationDelay: '-3s' }} />
-      <div className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-[hsl(var(--gradient-blue)/0.08)] blur-3xl animate-float" style={{ animationDelay: '-1.5s' }} />
-      
+      <div
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[hsl(var(--gradient-purple)/0.1)] blur-3xl animate-float"
+        style={{ animationDelay: "-3s" }}
+      />
+      <div
+        className="absolute top-1/2 right-1/3 w-48 h-48 rounded-full bg-[hsl(var(--gradient-blue)/0.08)] blur-3xl animate-float"
+        style={{ animationDelay: "-1.5s" }}
+      />
+
       <div className="container relative z-10 px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
@@ -23,7 +29,9 @@ const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card mb-8"
           >
             <span className="w-2 h-2 rounded-full bg-primary animate-glow-pulse" />
-            <span className="text-sm text-muted-foreground">Available for new opportunities</span>
+            <span className="text-sm text-muted-foreground">
+              Available for new opportunities
+            </span>
           </motion.div>
 
           {/* Main heading */}
@@ -34,8 +42,8 @@ const Hero = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-6"
           >
             Building Scalable &{" "}
-            <span className="gradient-text">High-Performance</span>{" "}
-            Web Experiences
+            <span className="gradient-text">High-Performance</span> Web
+            Experiences
           </motion.h1>
 
           {/* Subtext */}
@@ -45,8 +53,8 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
           >
-            Frontend Engineer specializing in React, TypeScript, and modern UI systems. 
-            Turning complex problems into elegant digital products.
+            Frontend Engineer specializing in React, TypeScript, and modern UI
+            systems. Turning complex problems into elegant digital products.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -77,9 +85,17 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-16 pt-8 border-t border-border"
           >
-            <p className="text-sm text-muted-foreground mb-6">Trusted technologies I work with</p>
+            <p className="text-sm text-muted-foreground mb-6">
+              Trusted technologies I work with
+            </p>
             <div className="flex flex-wrap items-center justify-center gap-8">
-              {['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'Node.js'].map((tech, index) => (
+              {[
+                "React",
+                "TypeScript",
+                "Tailwind CSS",
+                "Next.js",
+                "Node.js",
+              ].map((tech, index) => (
                 <motion.span
                   key={tech}
                   initial={{ opacity: 0, y: 10 }}
