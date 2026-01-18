@@ -5,14 +5,22 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
-    { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+    { icon: Github, href: "https://github.com/hardikmaks17", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://linkedin.com/in/hardikmaks17",
+      label: "LinkedIn",
+    },
+    {
+      icon: Twitter,
+      href: "https://twitter.com/hardikmaks17",
+      label: "Twitter",
+    },
+    { icon: Mail, href: "mailto:hardikmaks17@gmail.com", label: "Email" },
   ];
 
   return (
-    <footer className="py-12 border-t border-border relative overflow-hidden">
+    <footer className="py-8 sm:py-12 border-t border-border relative overflow-hidden">
       {/* Subtle gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--gradient-cyan)/0.02)] to-transparent pointer-events-none" />
 

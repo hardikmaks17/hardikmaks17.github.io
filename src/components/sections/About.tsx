@@ -31,7 +31,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 relative overflow-hidden" ref={ref}>
+    <section
+      id="about"
+      className="py-8 md:py-24 relative overflow-hidden scroll-mt-20"
+      ref={ref}
+    >
       {/* Subtle background gradient */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[hsl(var(--gradient-cyan)/0.05)] blur-3xl rounded-full" />
 
@@ -40,7 +44,7 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
         >
           <span className="section-title">About Me</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold">
@@ -82,7 +86,7 @@ const About = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid sm:grid-cols-2 gap-6 md:gap-8"
           >
             {highlights.map((item, index) => (
               <motion.div

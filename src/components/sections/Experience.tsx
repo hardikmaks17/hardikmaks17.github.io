@@ -11,36 +11,54 @@ const Experience = () => {
     {
       title: "Frontend Developer",
       company: "o2h Technology",
-      period: "2021 - Present",
+      period: "Apr 2025 - Present",
       description: [
-        "Building scalable web applications with React & TypeScript",
-        "Creating reusable UI component systems for enterprise products",
-        "Improving UI performance by 25% through code optimization",
-        "Delivering pixel-perfect interfaces matching design specifications",
-        "Collaborating with cross-functional teams in agile environment",
+        "Developed and maintained scalable, accessible web applications using React, TypeScript, and Material UI",
+        "Built modular and reusable UI components to improve development efficiency across multiple modules",
+        "Collaborated with backend and design teams to deliver responsive, pixel-perfect user interfaces",
+        "Improved UI performance by 25% through code optimization, lazy loading, and reducing DOM reflows",
       ],
     },
     {
-      title: "Senior Associate HTML Developer",
-      company: "Previous Company",
-      period: "2019 - 2021",
+      title: "Senior Associate HTML Developer - II",
+      company: "o2h Technology",
+      period: "Apr 2024 - Mar 2025",
       description: [
-        "Migrated legacy systems to modern React architecture",
-        "Built responsive MJML email template systems",
-        "Mentored junior developers on best practices",
-        "Implemented accessibility standards (WCAG 2.1)",
-        "Reduced page load times by 40% through optimization",
+        "Migrated legacy HTML/CSS applications into modern React architecture with Material UI",
+        "Developed reusable UI components and layout systems for scalable frontend development",
+        "Built MJML-based email templates with 100% cross-client compatibility",
+        "Mentored junior developers on frontend best practices and accessibility standards",
       ],
     },
     {
-      title: "Junior Frontend Developer",
-      company: "Startup Inc.",
-      period: "2018 - 2019",
+      title: "Associate HTML Developer II",
+      company: "o2h Technology",
+      period: "Apr 2023 - Mar 2024",
       description: [
-        "Developed responsive landing pages and web applications",
-        "Worked with JavaScript, HTML5, CSS3, and jQuery",
-        "Participated in code reviews and team meetings",
-        "Learned modern frameworks and development workflows",
+        "Converted static layouts into responsive, mobile-first UI using CSS Grid and Flexbox",
+        "Implemented semantic HTML and ARIA roles to improve accessibility compliance",
+        "Designed and implemented custom WordPress themes optimized for performance and SEO",
+        "Worked with cross-functional teams under Agile sprints using Jira",
+      ],
+    },
+    {
+      title: "HTML Trainee",
+      company: "o2h Technology",
+      period: "Jan 2022 - Mar 2023",
+      description: [
+        "Developed responsive layouts using HTML5, CSS3, and Bootstrap for client projects",
+        "Learned modern development workflows including Git version control and code review processes",
+        "Assisted in building MJML email templates ensuring cross-device compatibility",
+      ],
+    },
+    {
+      title: "Frontend Web Developer Intern",
+      company: "Dejavu Learning",
+      period: "Oct 2021 - Dec 2021",
+      description: [
+        "Redesigned the landing page using Bootstrap 5 and improved load time by 30%",
+        "Implemented custom UI elements with jQuery for better UX",
+        "Used Figma prototypes to design and implement responsive mobile workflows",
       ],
     },
   ];
@@ -48,7 +66,7 @@ const Experience = () => {
   return (
     <section
       id="experience"
-      className="py-24 relative overflow-hidden"
+      className="py-8 md:py-24 relative overflow-hidden scroll-mt-20"
       ref={ref}
     >
       {/* Background accent */}
@@ -60,7 +78,7 @@ const Experience = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-8 sm:mb-16"
           >
             <span className="section-title">Work Experience</span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold">
@@ -70,20 +88,20 @@ const Experience = () => {
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-[18px] sm:left-[22px] top-0 bottom-0 w-px bg-gradient-to-b from-[hsl(var(--gradient-cyan))] via-[hsl(var(--gradient-purple))] to-[hsl(var(--gradient-blue))]" />
+            <div className="absolute left-0 sm:left-[22px] top-10 bottom-1 w-px bg-gradient-to-b from-[hsl(var(--gradient-cyan))] via-[hsl(var(--gradient-purple))] to-[hsl(var(--gradient-blue))]" />
 
-            <div className="space-y-12">
+            <div className="space-y-6 md:space-y-12">
               {experiences.map((exp, index) => (
                 <motion.div
                   key={exp.title + exp.company}
                   initial={{ opacity: 0, x: -30 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.5, delay: 0.2 * index }}
-                  className="relative pl-12 sm:pl-16"
+                  className="relative pl-6 sm:pl-16"
                 >
                   {/* Timeline dot */}
                   <div
-                    className="absolute left-[12px] sm:left-[16px] top-2 w-3 h-3 rounded-full bg-primary"
+                    className="absolute left-[-6px] sm:left-[16px] top-10 w-3 h-3 rounded-full bg-primary"
                     style={{
                       boxShadow: "0 0 12px hsl(var(--glow-cyan) / 0.6)",
                     }}

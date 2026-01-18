@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
+
+const technologies = ["React", "TypeScript", "Material UI", "Next.js"];
 
 const Hero = () => {
   return (
@@ -64,17 +66,20 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <Button variant="hero" size="lg" className="group">
-              View Projects
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <Button variant="hero" size="lg" className="group" asChild>
+              <a href="#projects">
+                View Projects
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
             </Button>
-            <Button variant="heroOutline" size="lg">
-              <Download className="w-4 h-4" />
-              Download Resume
-            </Button>
-            <Button variant="outline" size="lg">
-              <Mail className="w-4 h-4" />
-              Contact Me
+            <Button variant="heroOutline" size="lg" asChild>
+              <a
+                href="/Hardik%20Makwana_Frontend%20Developer.pdf"
+                download="Hardik Makwana_Frontend Developer.pdf"
+              >
+                <Download className="w-4 h-4" />
+                Download Resume
+              </a>
             </Button>
           </motion.div>
 
@@ -83,19 +88,13 @@ const Hero = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="mt-16 pt-8 border-t border-border"
+            className="mt-8 sm:mt-16 pt-8 border-t border-border"
           >
             <p className="text-sm text-muted-foreground mb-6">
               Trusted technologies I work with
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-8">
-              {[
-                "React",
-                "TypeScript",
-                "Tailwind CSS",
-                "Next.js",
-                "Node.js",
-              ].map((tech, index) => (
+            <div className="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-2">
+              {technologies.map((tech, index) => (
                 <motion.span
                   key={tech}
                   initial={{ opacity: 0, y: 10 }}
@@ -116,7 +115,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2"
       >
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2">
           <motion.div

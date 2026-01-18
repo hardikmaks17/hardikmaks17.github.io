@@ -37,7 +37,7 @@ const Philosophy = () => {
   return (
     <section
       id="philosophy"
-      className="py-24 relative overflow-hidden"
+      className="py-8 md:py-24 relative overflow-hidden scroll-mt-20"
       ref={ref}
     >
       {/* Background gradient */}
@@ -48,7 +48,7 @@ const Philosophy = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
         >
           <span className="section-title">Design Philosophy</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-6">
@@ -60,7 +60,7 @@ const Philosophy = () => {
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {principles.map((principle, index) => (
             <motion.div
               key={principle.title}

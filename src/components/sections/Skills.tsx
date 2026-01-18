@@ -12,41 +12,44 @@ const Skills = () => {
       skills: [
         { name: "React", level: 95 },
         { name: "TypeScript", level: 90 },
-        { name: "JavaScript (ES6+)", level: 95 },
+        { name: "JavaScript (ES6+)", level: 90 },
         { name: "HTML5 / CSS3", level: 95 },
       ],
     },
     {
       title: "UI Systems",
       skills: [
-        { name: "Tailwind CSS", level: 92 },
-        { name: "Material UI", level: 85 },
-        { name: "Shadcn/UI", level: 90 },
-        { name: "Ant Design", level: 80 },
+        { name: "Tailwind CSS", level: 90 },
+        { name: "Material UI", level: 95 },
+        { name: "Shadcn/UI", level: 70 },
+        { name: "Ant Design", level: 70 },
       ],
     },
     {
       title: "Platforms & Tools",
       skills: [
-        { name: "Git & GitHub", level: 90 },
+        { name: "Git & GitHub", level: 85 },
         { name: "Figma", level: 85 },
-        { name: "Vercel / Netlify", level: 88 },
-        { name: "Jira", level: 82 },
+        { name: "Vercel / Netlify", level: 75 },
+        { name: "Jira", level: 75 },
       ],
     },
     {
       title: "Additional",
       skills: [
         { name: "Next.js", level: 85 },
-        { name: "Node.js", level: 75 },
-        { name: "REST APIs", level: 90 },
-        { name: "GraphQL", level: 70 },
+        { name: "Node.js", level: 65 },
+        { name: "REST APIs", level: 70 },
       ],
     },
   ];
 
   return (
-    <section id="skills" className="py-24 relative overflow-hidden" ref={ref}>
+    <section
+      id="skills"
+      className="py-8 md:py-24 relative overflow-hidden scroll-mt-20"
+      ref={ref}
+    >
       {/* Background accents */}
       <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-[hsl(var(--gradient-purple)/0.05)] blur-3xl rounded-full" />
 
@@ -55,7 +58,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-8 sm:mb-16"
         >
           <span className="section-title">Skills & Expertise</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold">
@@ -63,7 +66,7 @@ const Skills = () => {
           </h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2  gap-6 md:gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
