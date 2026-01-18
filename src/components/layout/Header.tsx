@@ -24,15 +24,26 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleMobileNavClick = (href: string, e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    setIsMobileMenuOpen(false);
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-4 bg-background/80 backdrop-blur-lg border-b border-border"
-          : "py-6"
+          ? "py-4 bg-background/50 backdrop-blur-lg border-b border-border"
+          : "py-4 sm:py-6"
       }`}
     >
-      <div className="container px-6">
+      <div className="container">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.a
@@ -42,8 +53,9 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-2"
           >
-            <img src="/favicon.png" alt="Logo" className="w-8 h-8" />
-            <span className="font-display font-bold text-xl gradient-text">Portfolio</span>
+            <span className="font-display font-bold text-xl gradient-text">
+              Maks Portfolio
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -72,8 +84,8 @@ const Header = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="hidden lg:block"
           >
-            <Button variant="hero" size="default">
-              Let's Talk
+            <Button variant="hero" size="default" asChild>
+              <a href="#contact">Let's Talk</a>
             </Button>
           </motion.div>
 
@@ -83,7 +95,11 @@ const Header = () => {
             className="lg:hidden p-2 text-foreground"
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>
@@ -96,22 +112,29 @@ const Header = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="lg:hidden bg-background/95 backdrop-blur-lg border-b border-border"
+            className="lg:hidden bg-background/80 backdrop-blur-lg border-b border-border mt-4"
           >
-            <nav className="container px-6 py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
+            <nav className="container">
+              <div className="flex flex-col sm:gap-4 pt-4 pb-6">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    onClick={(e) => handleMobileNavClick(link.href, e)}
+                    className="text-lg text-muted-foreground hover:text-foreground transition-colors py-2"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+                <Button
+                  variant="hero"
+                  size="lg"
+                  className="mt-4"
+                  onClick={() => handleMobileNavClick("#contact")}
                 >
-                  {link.label}
-                </a>
-              ))}
-              <Button variant="hero" size="lg" className="mt-4">
-                Let's Talk
-              </Button>
+                  Let's Talk
+                </Button>
+              </div>
             </nav>
           </motion.div>
         )}

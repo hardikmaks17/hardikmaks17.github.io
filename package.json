@@ -8,9 +8,17 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.{ts,tsx,json,css}\"",
+    "prepare": "husky install",
     "preview": "vite preview"
   },
+  "lint-staged": {
+    "src/**/*.{ts,tsx,json,css}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@hookform/resolvers": "^3.10.0",
     "@radix-ui/react-accordion": "^1.2.11",
     "@radix-ui/react-alert-dialog": "^1.1.14",
@@ -74,8 +82,11 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^15.15.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "lovable-tagger": "^1.1.13",
     "postcss": "^8.5.6",
+    "prettier": "^3.4.2",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.38.0",
